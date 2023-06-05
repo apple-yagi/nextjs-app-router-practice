@@ -9,8 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write src/*",
-    "test": "vitest --config vitest.config.ts run",
-    "test:u": "vitest --config vitest.config.ts run -u",
+    "test": "vitest --config .vitest/vitest.config.ts run",
+    "test:u": "vitest --config .vitest/vitest.config.ts run -u",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
