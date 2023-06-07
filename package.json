@@ -11,6 +11,7 @@
     "format": "prettier --write src/*",
     "test": "vitest --config .vitest/vitest.config.ts run",
     "test:u": "vitest --config .vitest/vitest.config.ts run -u",
+    "test:w": "vitest --config .vitest/vitest.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

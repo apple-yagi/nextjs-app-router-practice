@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > Danger Buttonが正しく表示されること 1`] = `
+<DocumentFragment>
+  <button
+    class="flex items-center justify-center rounded px-4 py-2 text-base border border-red-500 bg-red-500 text-white hover:border-red-700 hover:bg-red-700"
+    role="button"
+  >
+    ベンガル
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button > Default Buttonが正しく表示されること 1`] = `
+<DocumentFragment>
+  <button
+    class="flex items-center justify-center rounded px-4 py-2 text-base border border-blue-500 bg-blue-500 text-white hover:border-blue-700 hover:bg-blue-700"
+    role="button"
+  >
+    三毛猫
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button > Primary Buttonが正しく表示されること 1`] = `
+<DocumentFragment>
+  <button
+    class="flex items-center justify-center rounded px-4 py-2 text-base border border-blue-500 bg-blue-500 text-white hover:border-blue-700 hover:bg-blue-700"
+    role="button"
+  >
+    マンチカン
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button > Secondary Buttonが正しく表示されること 1`] = `
+<DocumentFragment>
+  <button
+    class="flex items-center justify-center rounded px-4 py-2 text-base border border-gray-500 bg-white text-black hover:bg-gray-300"
+    role="button"
+  >
+    スコティッシュフォールド
+  </button>
+</DocumentFragment>
+`;
