@@ -8,11 +8,13 @@ const meta = {
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 export const Default = {
   args: {
     children: "三毛猫",
   },
-} satisfies StoryObj<typeof meta>;
+} satisfies Story;
 
 export const Primary = {
   args: {
@@ -21,7 +23,7 @@ export const Primary = {
     },
     children: "マンチカン",
   },
-} satisfies StoryObj<typeof meta>;
+} satisfies Story;
 
 export const Secondary = {
   args: {
@@ -30,7 +32,7 @@ export const Secondary = {
     },
     children: "スコティッシュフォールド",
   },
-} satisfies StoryObj<typeof meta>;
+} satisfies Story;
 
 export const Danger = {
   args: {
@@ -39,4 +41,4 @@ export const Danger = {
     },
     children: "ベンガル",
   },
-} satisfies StoryObj<typeof meta>;
+} satisfies Story;
