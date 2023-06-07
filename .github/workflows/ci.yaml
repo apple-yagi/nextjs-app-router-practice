@@ -29,13 +29,16 @@ jobs:
         run: pnpm install --frozen-lock
 
       - name: format
-        run: pnpm run format
+        run: pnpm run format:check
 
       - name: lint
         run: pnpm run lint
 
       - name: typecheck
         run: pnpm run typecheck
+
+      - name: test
+        run: pnpm run test
 
       - name: build
         run: pnpm run build
