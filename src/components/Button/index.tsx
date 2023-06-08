@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
+import { twMerge } from "tailwind-merge";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const button = tv({
@@ -21,12 +22,17 @@ type ButtonVariants = VariantProps<typeof button>;
 
 export const Button = ({
   children,
+  className,
   role = "button",
   variants,
   ...props
 }: ComponentPropsWithoutRef<"button"> & { variants?: ButtonVariants }) => {
   return (
-    <button className={button(variants)} role={role} {...props}>
+    <button
+      className={twMerge(button(variants), className)}
+      role={role}
+      {...props}
+    >
       {children}
     </button>
   );
