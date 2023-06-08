@@ -8,7 +8,7 @@ const button = tv({
     color: {
       primary:
         "border border-blue-500 bg-blue-500 text-white hover:border-blue-700 hover:bg-blue-700",
-      secondary: "border border-gray-500 bg-white text-black hover:bg-gray-300",
+      secondary: "border border-gray-500 bg-white  hover:bg-gray-300",
       danger:
         "border border-red-500 bg-red-500 text-white hover:border-red-700 hover:bg-red-700",
     },

@@ -11,13 +11,13 @@ exports[`Modal > Modalが正しく表示されること 1`] = `
   tabindex="-1"
 >
   <h2
-    class="mb-2 text-lg font-semibold text-gray-500"
+    class="mb-2 text-lg font-semibold"
     id="radix-:r1:"
   >
     Modal Title
   </h2>
   <p
-    class="mb-4 text-sm text-gray-500"
+    class="mb-4 text-sm"
     id="radix-:r2:"
   >
     Modal Description

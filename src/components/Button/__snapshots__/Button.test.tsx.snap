@@ -36,7 +36,7 @@ exports[`Button > Primary Buttonが正しく表示されること 1`] = `
 exports[`Button > Secondary Buttonが正しく表示されること 1`] = `
 <DocumentFragment>
   <button
-    class="flex items-center justify-center rounded px-4 py-2 text-base border border-gray-500 bg-white text-black hover:bg-gray-300"
+    class="flex items-center justify-center rounded px-4 py-2 text-base border border-gray-500 bg-white hover:bg-gray-300"
     role="button"
   >
     スコティッシュフォールド
