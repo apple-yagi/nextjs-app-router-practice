@@ -3,9 +3,10 @@ import { twMerge } from "tailwind-merge";
 
 type Props = {
   label: string;
+  error?: false | null | string;
 } & ComponentPropsWithoutRef<"input">;
 
-export const TextInput = ({ className, label, ...props }: Props) => {
+export const TextInput = ({ className, label, error, ...props }: Props) => {
   return (
     <div className="flex flex-col gap-1">
       <label htmlFor={label}>{label}</label>
@@ -18,6 +19,11 @@ export const TextInput = ({ className, label, ...props }: Props) => {
         type="text"
         {...props}
       />
+      {error && (
+        <span className="text-red-400" role="alert">
+          {error}
+        </span>
+      )}
     </div>
   );
 };
