@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const button = tv({
-  base: "flex items-center justify-center rounded px-4 py-2 text-base",
+  base: "flex items-center justify-center rounded px-4 py-2 text-base disabled:opacity-50",
   variants: {
     color: {
       primary:
