@@ -20,9 +20,7 @@ export const Modal = ({ trigger, title, content }: Props) => {
           <Dialog.Title className="mb-2 text-lg font-semibold">
             {title}
           </Dialog.Title>
-          <Dialog.Description className="mb-4 text-sm">
-            {content}
-          </Dialog.Description>
+          <Dialog.Description asChild>{content}</Dialog.Description>
           <Dialog.Close className="absolute right-4 top-4 rounded-full" asChild>
             <button aria-label="閉じる">
               <Cross2Icon color="#6b7280" />
