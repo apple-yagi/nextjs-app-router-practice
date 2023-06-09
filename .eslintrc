@@ -6,7 +6,12 @@
   ],
   "plugins": ["import"],
   "rules": {
-    "no-unused-vars": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "react/no-children-prop": "off",
     "import/order": [
       "error",
