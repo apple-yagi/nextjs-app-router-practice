@@ -15,7 +15,7 @@ export const Default = {
   args: {
     trigger: <button>Open Modal</button>,
     title: "Modal Title",
-    description: "Modal Description",
+    content: "Modal Description",
   },
 } satisfies Story;
 

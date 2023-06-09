@@ -10,11 +10,11 @@ import {
 } from "./useTechBlogLinkForm";
 
 type Props = {
-  postTechBlogLink: (_values: TechBlogLinkFormValues) => Promise<void>;
+  submit: (values: TechBlogLinkFormValues) => Promise<void>;
 };
 
-export const TechBlogLinkForm = ({ postTechBlogLink }: Props) => {
-  const form = useTechBlogLinkForm(postTechBlogLink);
+export const TechBlogLinkForm = ({ submit }: Props) => {
+  const form = useTechBlogLinkForm(submit);
 
   return (
     <form.Provider>

@@ -1,3 +1,5 @@
+"use client";
+
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { ReactNode } from "react";
@@ -5,10 +7,10 @@ import { ReactNode } from "react";
 type Props = {
   trigger: ReactNode;
   title: string;
-  description: ReactNode;
+  content: ReactNode;
 };
 
-export const Modal = ({ trigger, title, description }: Props) => {
+export const Modal = ({ trigger, title, content }: Props) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
@@ -18,9 +20,7 @@ export const Modal = ({ trigger, title, description }: Props) => {
           <Dialog.Title className="mb-2 text-lg font-semibold">
             {title}
           </Dialog.Title>
-          <Dialog.Description className="mb-4 text-sm">
-            {description}
-          </Dialog.Description>
+          <Dialog.Description asChild>{content}</Dialog.Description>
           <Dialog.Close className="absolute right-4 top-4 rounded-full" asChild>
             <button aria-label="閉じる">
               <Cross2Icon color="#6b7280" />
