@@ -37,6 +37,9 @@ jobs:
       - name: lint
         run: pnpm run lint
 
+      - name: markuplint
+        run: pnpm run markuplint
+
       - name: typecheck
         run: pnpm run typecheck
 
