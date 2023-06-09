@@ -36,10 +36,8 @@ describe("TechBlogLinkForm", () => {
 
   it("送信ボタンを押すと、postTechBlogLinkが呼ばれること", async () => {
     const user = userEvent.setup();
-    const postTechBlogLink = vi.fn();
-    const { getByRole } = render(
-      <Default postTechBlogLink={postTechBlogLink} />
-    );
+    const submit = vi.fn();
+    const { getByRole } = render(<Default submit={submit} />);
 
     await user.type(
       getByRole("textbox", { name: "技術ブログのURL" }),
@@ -47,7 +45,7 @@ describe("TechBlogLinkForm", () => {
     );
     await user.click(getByRole("button", { name: "送信" }));
 
-    expect(postTechBlogLink).toHaveBeenCalledWith({
+    expect(submit).toHaveBeenCalledWith({
       techBlogLink: "https://example.com",
     });
   });

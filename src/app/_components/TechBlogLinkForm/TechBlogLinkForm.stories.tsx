@@ -12,6 +12,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default = {
   args: {
-    postTechBlogLink: async () => {},
+    submit: async () => {
+      return;
+    },
   },
 } satisfies Story;
