@@ -1,0 +1,26 @@
+"use server";
+
+import { load } from "cheerio";
+
+import { db, techBlogs } from "@/db";
+
+import { TechBlogLinkFormValues } from "../_components/TechBlogLinkForm/useTechBlogLinkForm";
+
+export const postTechBlog = async ({
+  techBlogLink,
+}: TechBlogLinkFormValues) => {
+  const text = await (await fetch(techBlogLink)).text();
+  const $ = load(text);
+
+  const title = $("meta[property='og:title']").attr("content");
+  if (typeof title !== "string") throw new Error("title is not found");
+
+  const ogImage = $("meta[property='og:image']").attr("content");
+  if (typeof ogImage !== "string") throw new Error("ogImage is not found");
+
+  await db.insert(techBlogs).values({
+    title,
+    ogImage,
+    link: techBlogLink,
+  });
+};
