@@ -19,7 +19,12 @@ export const useTechBlogLinkForm = (
 
   return formFactory.useForm({
     onSubmit: async (values) => {
-      await submit(values);
+      try {
+        await submit(values);
+      } catch (err) {
+        if (err instanceof Error) alert(err.message);
+        else alert("An error occurred while submitting the form.");
+      }
     },
   });
 };
