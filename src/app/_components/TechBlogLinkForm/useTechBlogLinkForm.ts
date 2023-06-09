@@ -6,7 +6,7 @@ export type TechBlogLinkFormValues = {
 };
 
 export const useTechBlogLinkForm = (
-  postTechBlogLink: (values: TechBlogLinkFormValues) => Promise<void>
+  postTechBlogLink: (_values: TechBlogLinkFormValues) => Promise<void>
 ) => {
   const formFactory = createFormFactory<TechBlogLinkFormValues>({
     defaultValues: useMemo(
