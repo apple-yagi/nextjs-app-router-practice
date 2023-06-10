@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card > 正しく表示されること 1`] = `
+<DocumentFragment>
+  <article
+    class="flex w-full max-w-xs flex-col items-center justify-center rounded-lg bg-white p-4 shadow-lg"
+  >
+    <img
+      alt=""
+      decoding="async"
+      height="140"
+      src="https://images.microcms-assets.io/assets/a7208e73031e4a0c89212443979ab98a/82716655718e4eef8af491d11a52c66b/renewal_my_blog_ogp.png"
+      width="288"
+    />
+    <p
+      class="mt-4 text-sm sm:text-base"
+    >
+      新しく自分のブログサイトを作り直しました
+    </p>
+  </article>
+</DocumentFragment>
+`;
