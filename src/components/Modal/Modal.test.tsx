@@ -1,32 +1,38 @@
-import { composeStories } from "@storybook/react";
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
-import * as stories from "./Modal.stories";
+import { Modal } from ".";
 
-const { Open } = composeStories(stories);
+const ModalTest = () => (
+  <Modal
+    trigger={<button>Open Modal</button>}
+    title="Modal Title"
+    content="Modal Description"
+  />
+);
 
 describe("Modal", () => {
   it("Modalが正しく表示されること", async () => {
-    const { container, getByRole } = render(<Open />);
+    const user = userEvent.setup();
+    const { getByRole } = render(<ModalTest />);
 
-    await Open.play({ canvasElement: container });
+    await user.click(getByRole("button", { name: "Open Modal" }));
 
     expect(getByRole("dialog")).toBeInTheDocument();
     expect(getByRole("heading", { name: "Modal Title" })).toBeInTheDocument();
-    expect(getByRole("button", { name: "閉じる" })).toBeInTheDocument();
     expect(getByRole("dialog")).toMatchSnapshot();
   });
 
   it("CloseIconを押すとModalが閉じること", async () => {
     const user = userEvent.setup();
 
-    const { container, getByRole, queryByRole } = render(<Open />);
+    const { getByRole, queryByRole } = render(<ModalTest />);
 
-    await Open.play({ canvasElement: container });
+    await user.click(getByRole("button", { name: "Open Modal" }));
+    expect(getByRole("dialog")).toBeInTheDocument();
+
     await user.click(getByRole("button", { name: "閉じる" }));
-
     expect(queryByRole("dialog")).not.toBeInTheDocument();
   });
 });
