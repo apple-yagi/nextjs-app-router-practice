@@ -5,14 +5,22 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 import { ReactNode } from "react";
 
 type Props = {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
   trigger: ReactNode;
   title: string;
   content: ReactNode;
 };
 
-export const Modal = ({ trigger, title, content }: Props) => {
+export const Modal = ({
+  open,
+  onOpenChange,
+  trigger,
+  title,
+  content,
+}: Props) => {
   return (
-    <Dialog.Root>
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-50" />
