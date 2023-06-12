@@ -25,14 +25,12 @@ export const TechBlogLinkForm = ({ submit }: Props) => {
             isUrl(value) ? undefined : "正しいURLを入力してください"
           }
           children={(field) => (
-            <>
-              <Form.TextInput
-                label="技術ブログのURL"
-                name={field.name}
-                error={field.state.meta.error}
-                {...field.getInputProps()}
-              />
-            </>
+            <Form.TextInput
+              label="技術ブログのURL"
+              name={field.name}
+              error={field.state.meta.error}
+              {...field.getInputProps()}
+            />
           )}
         />
         <form.Subscribe

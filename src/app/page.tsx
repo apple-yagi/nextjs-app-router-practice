@@ -1,17 +1,12 @@
-import { Button } from "@/components/Button";
-import { Modal } from "@/components/Modal";
-
-import { TechBlogLinkForm } from "./_components/TechBlogLinkForm";
-import { postTechBlog } from "./_server/postTechBlog.server";
+import { TodayRegisterdTechBlogList } from "./_components/TodayRegisteredTechBlogList";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Modal
-        trigger={<Button>登録</Button>}
-        title={"技術ブログのURLを登録する"}
-        content={<TechBlogLinkForm submit={postTechBlog} />}
-      />
+    <main className="mx-auto flex max-w-4xl flex-col">
+      <section className="flex flex-col gap-4 p-24">
+        <h2 className="text-lg">今日読んだ記事</h2>
+        <TodayRegisterdTechBlogList />
+      </section>
     </main>
   );
 }

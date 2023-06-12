@@ -31,6 +31,14 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install --frozen-lock
 
+      - name: Install vercel cli
+        run: pnpm add -g vercel
+
+      - name: Pull env
+        run: |
+          vercel link --yes --token ${{ secrets.VERCEL_TOKEN }}
+          vercel env pull .env --token ${{ secrets.VERCEL_TOKEN }}
+
       - name: format
         run: pnpm run format:check
 
