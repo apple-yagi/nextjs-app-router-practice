@@ -8,7 +8,7 @@ export const TodayRegisterdTechBlogList = async () => {
   const techBlogList = await db
     .select()
     .from(techBlogs)
-    .where(sql`${techBlogs.createdAt} < ${getToday()}::date`)
+    .where(sql`${techBlogs.createdAt} > ${getToday()}::date`)
     .orderBy(desc(techBlogs.createdAt));
 
   return <TodayRegisterdTechBlogListPresenter techBlogList={techBlogList} />;
