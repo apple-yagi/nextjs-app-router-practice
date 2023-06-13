@@ -21,7 +21,8 @@ export const useTechBlogLinkForm = (
     onSubmit: async (values, form) => {
       try {
         await submit(values);
-        form.reset();
+        // TODO 本来は form.reset() を使うのが正しいがバグっているので代替処理を入れている
+        form.setFieldValue("techBlogLink", "");
       } catch (err) {
         if (err instanceof Error) alert(err.message);
         else alert("An error occurred while submitting the form.");
