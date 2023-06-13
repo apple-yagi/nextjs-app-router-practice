@@ -1,4 +1,4 @@
-import { sql } from "drizzle-orm";
+import { desc, sql } from "drizzle-orm";
 
 import { db, techBlogs } from "@/db";
 
@@ -8,7 +8,8 @@ export const TodayRegisterdTechBlogList = async () => {
   const techBlogList = await db
     .select()
     .from(techBlogs)
-    .where(sql`${techBlogs.createdAt} > ${getToday()}::date`);
+    .where(sql`${techBlogs.createdAt} > ${getToday()}::date`)
+    .orderBy(desc(techBlogs.createdAt));
 
   return <TodayRegisterdTechBlogListPresenter techBlogList={techBlogList} />;
 };
