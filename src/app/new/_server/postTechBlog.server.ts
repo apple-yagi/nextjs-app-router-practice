@@ -1,7 +1,6 @@
 "use server";
 
 import { load } from "cheerio";
-import { revalidateTag } from "next/cache";
 
 import { db, techBlogs } from "@/db";
 import { getToday } from "@/utils/getToday";
@@ -26,6 +25,4 @@ export const postTechBlog = async ({
     link: techBlogLink,
     readingDate: getToday(),
   });
-
-  revalidateTag("getTodayRegisterdTechBlogList");
 };
