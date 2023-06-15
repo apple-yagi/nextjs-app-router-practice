@@ -1,4 +1,6 @@
+import { InferModel } from "drizzle-orm";
 import {
+  date,
   pgTable,
   serial,
   text,
@@ -13,6 +15,7 @@ export const techBlogs = pgTable(
     title: text("title").notNull(),
     link: text("link").notNull(),
     ogImage: text("og_image").notNull(),
+    readingDate: date("reading_date").notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at").defaultNow().notNull(),
   },
@@ -24,3 +27,5 @@ export const techBlogs = pgTable(
     };
   }
 );
+
+export type TechBlog = InferModel<typeof techBlogs, "select">;
