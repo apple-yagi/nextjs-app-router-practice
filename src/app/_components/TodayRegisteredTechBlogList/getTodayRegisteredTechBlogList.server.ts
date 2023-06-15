@@ -6,9 +6,6 @@ export const getTodayRegisteredTechBlogList =
     return await (
       await fetch(`${process.env.APP_URL}/api/tech_blogs?date=${getToday()}`, {
         cache: "no-store",
-        next: {
-          revalidate: 0,
-        },
       })
     ).json();
   };
