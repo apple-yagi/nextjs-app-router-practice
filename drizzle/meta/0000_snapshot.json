@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "e533b261-ca9f-485b-ad5d-b5cc80700b78",
+  "id": "d4e7e1e4-2fd6-4d67-9f0b-db499b110a54",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "tech_blogs": {
@@ -29,6 +29,12 @@
         "og_image": {
           "name": "og_image",
           "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reading_date": {
+          "name": "reading_date",
+          "type": "date",
           "primaryKey": false,
           "notNull": true
         },

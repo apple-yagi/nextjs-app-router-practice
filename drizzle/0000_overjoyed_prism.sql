@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS "tech_blogs" (
 	"title" text NOT NULL,
 	"link" text NOT NULL,
 	"og_image" text NOT NULL,
+	"reading_date" date NOT NULL,
 	"created_at" timestamp DEFAULT now() NOT NULL,
 	"updated_at" timestamp DEFAULT now() NOT NULL
 );

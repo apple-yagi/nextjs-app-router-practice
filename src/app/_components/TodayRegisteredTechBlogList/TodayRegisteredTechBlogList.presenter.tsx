@@ -2,16 +2,17 @@ import { Card } from "@/components/Card";
 
 type Props = {
   techBlogList: {
-    link: string;
+    id: number;
     title: string;
     ogImage: string;
-    id: number;
+    link: string;
+    readingDate: string;
     createdAt: Date;
     updatedAt: Date;
   }[];
 };
 
-export const TodayRegisterdTechBlogListPresenter = ({
+export const TodayRegisteredTechBlogListPresenter = ({
   techBlogList,
 }: Props) => {
   return (

@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { TodayRegisterdTechBlogListPresenter } from "./TodayRegisterdTechBlogList.presenter";
+import { TodayRegisteredTechBlogListPresenter } from "./TodayRegisteredTechBlogList.presenter";
 
 const meta = {
-  component: TodayRegisterdTechBlogListPresenter,
-} satisfies Meta<typeof TodayRegisterdTechBlogListPresenter>;
+  component: TodayRegisteredTechBlogListPresenter,
+} satisfies Meta<typeof TodayRegisteredTechBlogListPresenter>;
 
 export default meta;
 
@@ -18,6 +18,7 @@ export const Default = {
       link: "https://apple-yagi.me/blog/renewal_my_blog",
       ogImage:
         "https://images.microcms-assets.io/assets/a7208e73031e4a0c89212443979ab98a/82716655718e4eef8af491d11a52c66b/renewal_my_blog_ogp.png",
+      readingDate: "2023-06-12",
       createdAt: new Date("2023-06-12T13:02:02.000Z"),
       updatedAt: new Date("2023-06-12T13:02:02.000Z"),
     })),
